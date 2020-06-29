@@ -94,17 +94,18 @@ class AnaSayfa extends State<AnaSayfa2> with SingleTickerProviderStateMixin {
                     Container(
                       width: MediaQuery.of(context).size.width / 3 - 1,
                       child: RaisedButton(
-                          onPressed: () {
-                            setState(() {
-                              if (deadlineCurrentColor == true) {
-                                deadlineCurrentColor = false;
-                                deadlineColor = Colors.green[800];
-                              } else {
-                                deadlineCurrentColor = true;
-                                deadlineColor = Colors.grey[850];
-                              }
-                            });
-                          },
+                          onPressed: () =>
+                              Navigator.pushNamed(context, "/createdeadline"),
+                          // setState(() {
+                          //   if (deadlineCurrentColor == true) {
+                          //     deadlineCurrentColor = false;
+                          //     deadlineColor = Colors.green[800];
+                          //   } else {
+                          //     deadlineCurrentColor = true;
+                          //     deadlineColor = Colors.grey[850];
+                          //   }
+                          // });
+
                           color: deadlineColor,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
