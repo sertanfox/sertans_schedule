@@ -1,6 +1,3 @@
-import 'dart:ffi';
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class AnaSayfa2 extends StatefulWidget {
@@ -57,39 +54,43 @@ class AnaSayfa extends State<AnaSayfa2> with SingleTickerProviderStateMixin {
                     Container(
                       width: MediaQuery.of(context).size.width / 3 - 1,
                       child: RaisedButton(
-                          onPressed: () {
-                            setState(() {
-                              if (todayCurrentColor == true) {
-                                todayCurrentColor = false;
-                                todayColor = Colors.green[800];
-                              } else {
-                                todayCurrentColor = true;
-                                todayColor = Colors.grey[850];
-                              }
-                            });
-                          },
-                          color: todayColor,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text('T',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('O',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('D',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('A',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('Y',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                            ],
-                          )),
+                        onPressed: () {
+                          setState(() {
+                            if (todayCurrentColor == true) {
+                              todayCurrentColor = false;
+                              todayColor = Colors.green[800];
+                            } else {
+                              todayCurrentColor = true;
+                              todayColor = Colors.grey[850];
+                            }
+                          });
+                        },
+                        color: todayColor,
+                        child: Transform(
+                            alignment: Alignment.center,
+                            transform: Matrix4.skewY(0.0)..rotateZ(0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text('T',
+                                    style: TextStyle(
+                                        color: Colors.grey[400], fontSize: 18)),
+                                Text('O',
+                                    style: TextStyle(
+                                        color: Colors.grey[400], fontSize: 18)),
+                                Text('D',
+                                    style: TextStyle(
+                                        color: Colors.grey[400], fontSize: 18)),
+                                Text('A',
+                                    style: TextStyle(
+                                        color: Colors.grey[400], fontSize: 18)),
+                                Text('Y',
+                                    style: TextStyle(
+                                        color: Colors.grey[400], fontSize: 18)),
+                              ],
+                            )),
+                      ),
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width / 3 - 1,
