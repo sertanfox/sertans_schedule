@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -37,7 +38,7 @@ dev_dependencies:
 flutter_icons:
   android: "ic_launcher"
   ios: true
-  image_path: "assets/sudoku/schedule.png"
+  image_path: "assets/schedule.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -45,6 +46,8 @@ flutter_icons:
 # The following section is specific to Flutter.
 flutter:
 
+  assets:
+   - assets/images/darkin.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

@@ -11,8 +11,13 @@ class _CreateDeadlineState extends State<CreateDeadline> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, "/"),
-      onDoubleTap: () => colored = Colors.redAccent,
-      child: Container(width: 200, height: 200, color: colored),
+      child: Container(
+        width: 200,
+        height: 200,
+        decoration: BoxDecoration(
+            image:
+                DecorationImage(image: AssetImage("assets/images/darkin.png"))),
+      ),
     );
   }
 }
