@@ -7,7 +7,6 @@ class CreateDeadline extends StatefulWidget {
 
 class _CreateDeadlineState extends State<CreateDeadline> {
   @override
-  Color colored = Colors.green[100];
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, "/"),

@@ -1,4 +1,5 @@
 import 'package:first_flutter_app/arayuz/createdeadline.dart';
+import 'arayuz/imageviews.dart';
 import 'package:flutter/material.dart';
 import 'arayuz/anasayfa.dart';
 
@@ -8,6 +9,7 @@ void main() {
     routes: {
       "/": (context) => AnaSayfa2(),
       "/createdeadline": (context) => CreateDeadline(),
+      "/imageviews": (context) => ImageViews(),
     },
   ));
 }

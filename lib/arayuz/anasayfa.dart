@@ -54,17 +54,18 @@ class AnaSayfa extends State<AnaSayfa2> with SingleTickerProviderStateMixin {
                     Container(
                       width: MediaQuery.of(context).size.width / 3 - 1,
                       child: RaisedButton(
-                        onPressed: () {
-                          setState(() {
-                            if (todayCurrentColor == true) {
-                              todayCurrentColor = false;
-                              todayColor = Colors.green[800];
-                            } else {
-                              todayCurrentColor = true;
-                              todayColor = Colors.grey[850];
-                            }
-                          });
-                        },
+                        onPressed: () =>
+                            Navigator.pushNamed(context, "/imageviews"),
+                        // setState(() {
+                        //   if (todayCurrentColor == true) {
+                        //     todayCurrentColor = false;
+                        //     todayColor = Colors.green[800];
+                        //   } else {
+                        //     todayCurrentColor = true;
+                        //     todayColor = Colors.grey[850];
+                        //   }
+                        // });
+                        // },
                         color: todayColor,
                         child: Transform(
                             alignment: Alignment.center,
