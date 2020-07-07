@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AnaSayfa2 extends StatefulWidget {
+class MainPage extends StatefulWidget {
   @override
-  AnaSayfa createState() => AnaSayfa();
+  Starter createState() => Starter();
 }
 
-class AnaSayfa extends State<AnaSayfa2> with SingleTickerProviderStateMixin {
+class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
   Color todayColor = Colors.grey[850];
   Color deadlineColor = Colors.grey[850];
   Color dateColor = Colors.grey[850];
