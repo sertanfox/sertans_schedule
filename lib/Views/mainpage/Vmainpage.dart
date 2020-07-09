@@ -9,7 +9,6 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
   Color todayColor = Colors.grey[850];
   Color deadlineColor = Colors.grey[850];
   Color dateColor = Colors.grey[850];
-
   bool todayCurrentColor = true;
   bool deadlineCurrentColor = true;
   bool dateCurrentColor = true;

@@ -1,13 +1,13 @@
-import 'package:first_flutter_app/arayuz/createdeadline.dart';
-import 'arayuz/imageviews.dart';
+import 'package:first_flutter_app/Views/mainpage/VcreateDeadline.dart';
+import 'mainpage/VcreateToday.dart';
 import 'package:flutter/material.dart';
-import 'arayuz/anasayfa.dart';
+import 'mainpage/Vmainpage.dart';
 
 void main() {
   runApp(MaterialApp(
     initialRoute: "/",
     routes: {
-      "/": (context) => AnaSayfa2(),
+      "/": (context) => MainPage(),
       "/createdeadline": (context) => CreateDeadline(),
       "/imageviews": (context) => ImageViews(),
     },
