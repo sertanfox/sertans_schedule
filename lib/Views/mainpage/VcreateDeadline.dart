@@ -34,14 +34,17 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                         width: MediaQuery.of(context).size.width * 3 / 5 - 1,
                         height: MediaQuery.of(context).size.height,
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.red, width: 2),
+                          color: Colors.amber,
+                          border: Border.all(color: Colors.amber, width: 2),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: TextField(
+                          maxLines: 18,
                           cursorColor: Colors.white,
                           enableInteractiveSelection: false,
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.start,
+                          decoration: InputDecoration(
+                              hintText: "Write your mission here..."),
                         )),
                     Container(
                         width: MediaQuery.of(context).size.width * 2 / 5 - 2,
@@ -77,7 +80,7 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Container(
-                        color: Colors.blueAccent,
+                        color: Colors.amber,
                         width: MediaQuery.of(context).size.width * 3 / 5 - 2,
                         height: MediaQuery.of(context).size.height,
                         child: FlatButton(
@@ -94,7 +97,16 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                                 currentTime: DateTime.now(),
                                 locale: LocaleType.tr);
                           },
-                          child: ButtonText("SELECT DATE", Colors.brown, 20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              ButtonText("D", _raisedbutton, 20),
+                              ButtonText("A", _raisedbutton, 20),
+                              ButtonText("T", _raisedbutton, 20),
+                              ButtonText("E", _raisedbutton, 20),
+                            ],
+                          ),
                         ),
                       ),
                       Container(
@@ -135,7 +147,7 @@ class ButtonText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text,
         style: TextStyle(
-            fontSize: fontsize,
+            fontSize: this.fontsize,
             color: this.color,
             fontWeight: FontWeight.bold));
   }
