@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/Models/myWidgets.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -13,13 +14,19 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
   bool deadlineCurrentColor = true;
   bool dateCurrentColor = true;
 
+  void _animateContainer() {
+    setState(() {
+      dateColor = Colors.greenAccent;
+    });
+  }
+
   AnimationController _controller;
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
         vsync: this, // the SingleTickerProviderStateMixin
-        duration: Duration(milliseconds: 1000));
+        duration: Duration(seconds: 2));
   }
 
   @override
@@ -69,27 +76,8 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
                         child: Transform(
                             alignment: Alignment.center,
                             transform: Matrix4.skewY(0.0)..rotateZ(0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Text('T',
-                                    style: TextStyle(
-                                        color: Colors.grey[400], fontSize: 18)),
-                                Text('O',
-                                    style: TextStyle(
-                                        color: Colors.grey[400], fontSize: 18)),
-                                Text('D',
-                                    style: TextStyle(
-                                        color: Colors.grey[400], fontSize: 18)),
-                                Text('A',
-                                    style: TextStyle(
-                                        color: Colors.grey[400], fontSize: 18)),
-                                Text('Y',
-                                    style: TextStyle(
-                                        color: Colors.grey[400], fontSize: 18)),
-                              ],
-                            )),
+                            child: CreateVerticalTexts(
+                                "TODAY", Colors.grey[400], 18)),
                       ),
                     ),
                     Container(
@@ -108,71 +96,19 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
                           // });
 
                           color: deadlineColor,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text('D',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('E',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('A',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('D',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('L',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('I',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('N',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('E',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                            ],
-                          )),
+                          child: CreateVerticalTexts(
+                              "DEADLINE", Colors.grey[400], 18)),
                     ),
                     AnimatedContainer(
                       width: MediaQuery.of(context).size.width / 3 - 1,
-                      duration: Duration(milliseconds: 1000),
+                      duration: Duration(milliseconds: 2000),
                       child: RaisedButton(
                           onPressed: () {
-                            setState(() {
-                              if (dateCurrentColor == true) {
-                                dateCurrentColor = false;
-                                dateColor = Colors.green[800];
-                              } else {
-                                dateCurrentColor = true;
-                                dateColor = Colors.grey[850];
-                              }
-                            });
+                            _animateContainer();
                           },
                           color: dateColor,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text('D',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('A',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('T',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                              Text('E',
-                                  style: TextStyle(
-                                      color: Colors.grey[400], fontSize: 18)),
-                            ],
-                          )),
+                          child: CreateVerticalTexts(
+                              "DATE", Colors.grey[400], 18)),
                     ),
                   ],
                 ),
