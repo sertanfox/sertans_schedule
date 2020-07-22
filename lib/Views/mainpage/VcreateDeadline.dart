@@ -8,9 +8,6 @@ class CreateDeadline extends StatefulWidget {
 
 class _CreateDeadlineState extends State<CreateDeadline> {
   String _mission;
-  Color _missiontype = Colors.green;
-  Color _submit = Colors.yellow;
-  Color _raisedbutton = Colors.grey[850];
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +15,8 @@ class _CreateDeadlineState extends State<CreateDeadline> {
     double _width = MediaQuery.of(context).size.width;
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text("Add Mission Deadline Dude"),
-          backgroundColor: Colors.green,
+          title: new Text("Add Mission Deadline"),
+          backgroundColor: Colors.green[800],
         ),
         body: Container(
             color: Colors.red,
@@ -56,16 +53,16 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                               hintText: "Write your mission here..."),
                         ),
                       ),
-                      Container(
-                        height: _height / 2 - 10,
-                        width: _width / 2 - 8,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.white),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: GestureDetector(
-                          onTap: null,
+                      GestureDetector(
+                        onTap: null,
+                        child: Container(
+                          height: _height / 2 - 10,
+                          width: _width / 2 - 8,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: Colors.white),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                           child: Center(
                               child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -82,7 +79,7 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                             ],
                           )),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   Row(

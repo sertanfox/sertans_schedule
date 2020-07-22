@@ -42,6 +42,7 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
         title: const Text("SERTAN'S SCHEDULE"),
         backgroundColor: Colors.green[800],
         centerTitle: true,
+        leading: new Container(),
       ),
       body: Center(
         child: Container(
@@ -61,7 +62,7 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
                       width: MediaQuery.of(context).size.width / 3 - 1,
                       child: RaisedButton(
                         onPressed: () =>
-                            Navigator.pushNamed(context, "/imageviews"),
+                            Navigator.pushNamed(context, "/Vcreatetoday"),
                         color: todayColor,
                         child: Transform(
                             alignment: Alignment.center,
@@ -74,18 +75,16 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
                       width: MediaQuery.of(context).size.width / 3 - 1,
                       child: RaisedButton(
                           onPressed: () =>
-                              Navigator.pushNamed(context, "/createdeadline"),
+                              Navigator.pushNamed(context, "/Vcreatedeadline"),
                           color: deadlineColor,
                           child: CreateVerticalTexts(
                               "DEADLINE", Colors.grey[400], 18)),
                     ),
-                    AnimatedContainer(
+                    Container(
                       width: MediaQuery.of(context).size.width / 3 - 1,
-                      duration: Duration(milliseconds: 2000),
                       child: RaisedButton(
-                          onPressed: () {
-                            _animateContainer();
-                          },
+                          onPressed: () =>
+                              Navigator.pushNamed(context, "/Vcreatedate"),
                           color: dateColor,
                           child: CreateVerticalTexts(
                               "DATE", Colors.grey[400], 18)),
