@@ -62,16 +62,6 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
                       child: RaisedButton(
                         onPressed: () =>
                             Navigator.pushNamed(context, "/imageviews"),
-                        // setState(() {
-                        //   if (todayCurrentColor == true) {
-                        //     todayCurrentColor = false;
-                        //     todayColor = Colors.green[800];
-                        //   } else {
-                        //     todayCurrentColor = true;
-                        //     todayColor = Colors.grey[850];
-                        //   }
-                        // });
-                        // },
                         color: todayColor,
                         child: Transform(
                             alignment: Alignment.center,
@@ -85,16 +75,6 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
                       child: RaisedButton(
                           onPressed: () =>
                               Navigator.pushNamed(context, "/createdeadline"),
-                          // setState(() {
-                          //   if (deadlineCurrentColor == true) {
-                          //     deadlineCurrentColor = false;
-                          //     deadlineColor = Colors.green[800];
-                          //   } else {
-                          //     deadlineCurrentColor = true;
-                          //     deadlineColor = Colors.grey[850];
-                          //   }
-                          // });
-
                           color: deadlineColor,
                           child: CreateVerticalTexts(
                               "DEADLINE", Colors.grey[400], 18)),

@@ -89,17 +89,17 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(top: 5),
-                        height: _height / 2 - 5,
-                        width: _width / 2 - 8,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.white),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: GestureDetector(
-                          onTap: () => Navigator.pushNamed(context, "/"),
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, "/"),
+                        child: Container(
+                          margin: EdgeInsets.only(top: 5),
+                          height: _height / 2 - 5,
+                          width: _width / 2 - 8,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: Colors.white),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                           child: Center(
                               child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -121,16 +121,14 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                           )),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 5),
-                        height: _height / 2 - 5,
-                        width: _width / 2 - 8,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(color: Colors.white),
-                          borderRadius: BorderRadius.circular(15),
+                      GestureDetector(
+                        onTap: null,
+                        child: Container(
+                          margin: EdgeInsets.only(top: 5),
+                          height: _height / 2 - 5,
+                          width: _width / 2 - 8,
+                          child: CreateDateTimePicker("DATE", Colors.black, 18),
                         ),
-                        child: CreateDateTimePicker("DATE", Colors.black, 18),
                       )
                     ],
                   ),
