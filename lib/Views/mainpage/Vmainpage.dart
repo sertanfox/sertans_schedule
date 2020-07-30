@@ -13,6 +13,8 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
   bool todayCurrentColor = true;
   bool deadlineCurrentColor = true;
   bool dateCurrentColor = true;
+  @override
+  // TODO: implement context
 
   void _animateContainer() {
     setState(() {
@@ -103,11 +105,14 @@ class Starter extends State<MainPage> with SingleTickerProviderStateMixin {
 }
 
 class MissionsButton extends StatelessWidget {
+  String path;
+
+  MissionsButton(this.path);
   @override
   Widget build(BuildContext context) => Container(
         width: MediaQuery.of(context).size.width / 3 - 1,
         child: RaisedButton(
-          onPressed: () {},
+          onPressed: () => Navigator.pushNamed(context, path),
           color: Colors.grey[500],
           child: Text("MISSIONS",
               textAlign: TextAlign.center, style: TextStyle(fontSize: 17)),
@@ -125,9 +130,9 @@ class MissionsContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            MissionsButton(),
-            MissionsButton(),
-            MissionsButton()
+            MissionsButton("/VshowToday"),
+            MissionsButton("/VshowDeadline"),
+            MissionsButton("/VshowDate")
           ],
         ),
       );

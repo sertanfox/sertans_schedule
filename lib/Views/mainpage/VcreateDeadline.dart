@@ -46,6 +46,7 @@ class _CreateDeadlineState extends State<CreateDeadline> {
                         child: TextField(
                           onChanged: (String str) => _mission = str,
                           maxLines: 18,
+                          maxLength: 200,
                           cursorColor: Colors.white,
                           enableInteractiveSelection: false,
                           textAlign: TextAlign.start,

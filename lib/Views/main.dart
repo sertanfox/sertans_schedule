@@ -5,6 +5,10 @@ import 'mainpage/VcreateToday.dart';
 import 'package:flutter/material.dart';
 import 'mainpage/Vmainpage.dart';
 import 'mainpage/VcreateDate.dart';
+import 'mainpage/VshowToday.dart';
+import 'mainpage/VshowDeadline.dart';
+import 'mainpage/VshowDate.dart';
+import 'editpages/VdeadlineEditSettings.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,6 +18,10 @@ void main() {
       "/Vcreatedeadline": (context) => CreateDeadline(),
       "/Vcreatetoday": (context) => CreateToday(),
       "/Vcreatedate": (context) => VcreateDate(),
+      "/VshowToday": (context) => VshowToday(),
+      "/VshowDeadline": (context) => VshowDeadline(),
+      "/VshowDate": (context) => VshowDate(),
+      "/VdeadlineEditSettings": (context) => VdeadlineEditSettings(),
     },
   ));
 }
